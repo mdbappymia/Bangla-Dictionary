@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: 16px Arial;
+  background-color: #8a8686;
+}
+.content {
+  max-width: 300px;
+  margin: auto;
+}
+label {
+  font-size: 30px;
+  color: #2f3634;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.autocomplete {
+  /*the container must be positioned relative:*/
+  position: relative;
+  display: inline-block;
+}
+input {
+  border: 1px solid transparent;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 16px;
+  text-transform: capitalize;
+  outline: none;
+}
+input[type="text"] {
+  background-color: #f1f1f1;
+  width: 100%;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+#meaning {
+  height: 60px;
+  border: 2px solid rgb(66, 66, 66);
+  margin-top: 4px;
+  overflow-x: scroll;
+  padding: 4px;
+}
+input[type="submit"] {
+  background-color: DodgerBlue;
+  color: #fff;
+}
+#input-wordautocomplete-list {
+  height: 100% !important;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+#input-wordautocomplete-list::-webkit-scrollbar {
+  display: inline;
+}
+#input-wordautocomplete-list::-webkit-scrollbar-thumb {
+  background-color: #d4d4d4;
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  border-top: none;
+  z-index: 99;
+  width: 250px;
+
+  margin: auto;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 80px;
+}
+.autocomplete-items div {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}
